@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: py-app
+spec:
+  replicas: 2  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: py-app
+  template:
+    metadata:
+      labels:
+        app: py-app
+    spec:
+      containers:
+      - name: py-app
+        image: or3534/demo_app:latest  # Specify your Docker image
+        ports:
+        - containerPort: 5000  # Port your Flask app is listening on
