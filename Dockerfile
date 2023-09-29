@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Specify the command to run your Python web application
-CMD ["python", "./final_project.git/app.py", "&"] 
+CMD ["python", "./python-app/app.py", "&"] 
