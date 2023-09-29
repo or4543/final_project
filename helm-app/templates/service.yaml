@@ -4,7 +4,7 @@ metadata:
   name: app-service
 spec:
   selector:
-    app: py-app
+    app: my-app
   type: LoadBalancer
   ports:
     - port: 5000
