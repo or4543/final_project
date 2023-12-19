@@ -15,9 +15,9 @@ pipeline {
             steps {
                   container('dind') {
                                   script {
-                                      checkout([$class: 'GitSCM', branches: [[name: 'feature']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'or_git_hub', url: "${GITHUB_REPO_URL}"]]])
+                                      checkout([$class: 'GitSCM', branches: [[name: 'feature']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Or_Github', url: "${GITHUB_REPO_URL}"]]])
                                           sh "docker build -t ${IMAGE_NAME} ."
-                                          withCredentials([usernamePassword(credentialsId: 'or_dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                                          withCredentials([usernamePassword(credentialsId: 'Or_Dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                                           sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
                                               // Push the Docker image to Docker Hub
                                           sh "docker push ${IMAGE_NAME}"
@@ -30,3 +30,4 @@ pipeline {
 
         // Additional stages or steps can be added as needed
     }
+
