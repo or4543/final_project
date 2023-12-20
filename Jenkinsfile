@@ -13,7 +13,7 @@ pipeline {
     stages {
           stage('Checkout Code') {
             steps {
-                   checkout([$class: 'GitSCM', branches: [[name: 'main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Or_Github', url: "${GITHUB_REPO_URL}"]]])
+                   checkout([$class: 'GitSCM', branches: [[name: 'feature']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Or_Github', url: "${GITHUB_REPO_URL}"]]])
             }
           }
         stage('Build Docker Image') {
