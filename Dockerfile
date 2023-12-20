@@ -5,13 +5,15 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy your Python application files into the container
-COPY . .
+COPY . /app
 
-# Install any dependencies your application needs
+# Install any dependencies your application needs (e.g., Flask, Django, etc.)
+# If you have a requirements.txt file, you can use it to install dependencies
+# Example: 
 RUN pip install -r requirements.txt
 
 # Expose the port your web application will listen on (e.g., 5000)
 EXPOSE 5000
 
 # Specify the command to run your Python web application
-CMD ["python", "./app.py"]
+CMD ["python", "./python-app/app.py", "&"] 
