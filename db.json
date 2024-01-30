@@ -1,0 +1,19 @@
+{
+    "links": [
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/or-dahaman/",
+            "icon": "https://store-images.s-microsoft.com/image/apps.31120.9007199266245564.44dc7699-748d-4c34-ba5e-d04eb48f7960.bc4172bd-63f0-455a-9acd-5457f44e4473?h=380"
+        },
+        {
+            "label": "GitHub",
+            "url": "https://github.com/or4543",
+            "icon": "https://lthub.ubc.ca/files/2021/06/GitHub-Logo.png"
+        },
+        {
+            "label": "GitLab",
+            "url": "https://gitlab.com/ordahaman2",
+            "icon": "https://www.cloudservices.store/site/wp-content/uploads/2020/10/logo-extra-whitespace.png"
+        }
+    ]
+}
